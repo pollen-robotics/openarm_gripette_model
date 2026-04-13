@@ -1,0 +1,9 @@
+[project]
+name = "openarm-gripette-model"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["onshape-to-robot>=1.8.1",
+              "pybullet>=3.2.7",
+              "mujoco>=3.6",]
