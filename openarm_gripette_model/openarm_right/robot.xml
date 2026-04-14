@@ -2,7 +2,7 @@
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/8728c7fdb0e0b3c78180e1fb/w/70d590d987c43934e5d14436/e/c77dbd6d3fbd22e2e0636f89 -->
 <mujoco model="openarm_right">
-  <compiler angle="radian" meshdir="assets" autolimits="true"/>
+  <compiler angle="radian" autolimits="true"/>
   <default>
     <default class="openarm_right">
       <joint frictionloss="0.1" armature="0.005"/>
@@ -11,7 +11,7 @@
         <geom type="mesh" contype="0" conaffinity="0" group="2"/>
       </default>
       <default class="collision">
-        <geom group="3"/>
+        <geom group="3" contype="2" conaffinity="1"/>
       </default>
     </default>
   </default>
@@ -187,6 +187,9 @@
                     <site group="3" name="openarm_fix" pos="-0 0.0495 0.0205" quat="0.5 0.5 0.5 -0.5"/>
                     <!-- Frame camera -->
                     <site group="3" name="camera" pos="0.0687999 0.0662004 0.0260816" quat="0.499998 -0.500002 0.500002 0.499998"/>
+                    <!-- Gripette camera (180° pitch correction from site frame to MuJoCo camera convention) -->
+                    <!-- fovy=130° for wide pinhole render, fisheye distortion applied in post -->
+                    <camera name="gripette_cam" pos="0.0687999 0.0662004 0.0260816" quat="0.500002 0.499998 0.499998 -0.500002" fovy="130"/>
                     <!-- Link feetech_sts3215__configuration_default -->
                     <body name="feetech_sts3215__configuration_default" pos="0.0177499 0.1071 -0.0147625" quat="0.0616284 0.704416 -0.0616284 -0.704416">
                       <!-- Joint from gripper_base to feetech_sts3215__configuration_default -->
@@ -224,51 +227,51 @@
     </body>
   </worldbody>
   <asset>
-    <mesh file="b0404.stl"/>
-    <mesh file="j6_d_3_step.stl"/>
-    <mesh file="camera_imu_support.stl"/>
-    <mesh file="j5_a_3_step.stl"/>
-    <mesh file="j7_b_2_step.stl"/>
-    <mesh file="proximal_side.stl"/>
-    <mesh file="j1_e_1_step.stl"/>
-    <mesh file="j4_b_2_step.stl"/>
-    <mesh file="j2_b_2_step.stl"/>
-    <mesh file="j1_b_2_step.stl"/>
-    <mesh file="j7_e_2_step.stl"/>
-    <mesh file="fl6700zz_2_step.stl"/>
-    <mesh file="hfsb6_6060_750_1_step.stl"/>
-    <mesh file="backplate.stl"/>
-    <mesh file="dm_j4310_1_2_step.stl"/>
-    <mesh file="proximal_top.stl"/>
-    <mesh file="j4_a_2_step.stl"/>
-    <mesh file="j8_a_2_step.stl"/>
-    <mesh file="j7_a_2_step.stl"/>
-    <mesh file="j4_c_2_step.stl"/>
-    <mesh file="distal.stl"/>
-    <mesh file="j1_c_1_step.stl"/>
-    <mesh file="j6_a_3_step.stl"/>
-    <mesh file="j6_c_right_2_step.stl"/>
-    <mesh file="j2_c_2_step.stl"/>
-    <mesh file="j7_b_2_step_2.stl"/>
-    <mesh file="j8_b_2_step.stl"/>
-    <mesh file="j7_c_2_step.stl"/>
-    <mesh file="fl6700zz_2_step_1.stl"/>
-    <mesh file="proximal_bottom.stl"/>
-    <mesh file="gripper_base.stl"/>
-    <mesh file="feetech_sts3215__configuration_default.stl"/>
-    <mesh file="j6_b_3_step.stl"/>
-    <mesh file="dm_j4310_1_2_step_1.stl"/>
-    <mesh file="j2_a_1_step.stl"/>
-    <mesh file="dm_j8009p_2_step.stl"/>
-    <mesh file="dm_j4310_1_2_step_2.stl"/>
-    <mesh file="j4_e_2_step.stl"/>
-    <mesh file="dm_j8009p_2_step_1.stl"/>
-    <mesh file="j4_d_2_step.stl"/>
-    <mesh file="fl6803zz_2_step.stl"/>
-    <mesh file="dm_j4340_2_step.stl"/>
-    <mesh file="j1_d_1_step.stl"/>
-    <mesh file="j1_a_1_step.stl"/>
-    <mesh file="dm_j4340p_2_step.stl"/>
+    <mesh file="assets/b0404.stl"/>
+    <mesh file="assets/j6_d_3_step.stl"/>
+    <mesh file="assets/camera_imu_support.stl"/>
+    <mesh file="assets/j5_a_3_step.stl"/>
+    <mesh file="assets/j7_b_2_step.stl"/>
+    <mesh file="assets/proximal_side.stl"/>
+    <mesh file="assets/j1_e_1_step.stl"/>
+    <mesh file="assets/j4_b_2_step.stl"/>
+    <mesh file="assets/j2_b_2_step.stl"/>
+    <mesh file="assets/j1_b_2_step.stl"/>
+    <mesh file="assets/j7_e_2_step.stl"/>
+    <mesh file="assets/fl6700zz_2_step.stl"/>
+    <mesh file="assets/hfsb6_6060_750_1_step.stl"/>
+    <mesh file="assets/backplate.stl"/>
+    <mesh file="assets/dm_j4310_1_2_step.stl"/>
+    <mesh file="assets/proximal_top.stl"/>
+    <mesh file="assets/j4_a_2_step.stl"/>
+    <mesh file="assets/j8_a_2_step.stl"/>
+    <mesh file="assets/j7_a_2_step.stl"/>
+    <mesh file="assets/j4_c_2_step.stl"/>
+    <mesh file="assets/distal.stl"/>
+    <mesh file="assets/j1_c_1_step.stl"/>
+    <mesh file="assets/j6_a_3_step.stl"/>
+    <mesh file="assets/j6_c_right_2_step.stl"/>
+    <mesh file="assets/j2_c_2_step.stl"/>
+    <mesh file="assets/j7_b_2_step_2.stl"/>
+    <mesh file="assets/j8_b_2_step.stl"/>
+    <mesh file="assets/j7_c_2_step.stl"/>
+    <mesh file="assets/fl6700zz_2_step_1.stl"/>
+    <mesh file="assets/proximal_bottom.stl"/>
+    <mesh file="assets/gripper_base.stl"/>
+    <mesh file="assets/feetech_sts3215__configuration_default.stl"/>
+    <mesh file="assets/j6_b_3_step.stl"/>
+    <mesh file="assets/dm_j4310_1_2_step_1.stl"/>
+    <mesh file="assets/j2_a_1_step.stl"/>
+    <mesh file="assets/dm_j8009p_2_step.stl"/>
+    <mesh file="assets/dm_j4310_1_2_step_2.stl"/>
+    <mesh file="assets/j4_e_2_step.stl"/>
+    <mesh file="assets/dm_j8009p_2_step_1.stl"/>
+    <mesh file="assets/j4_d_2_step.stl"/>
+    <mesh file="assets/fl6803zz_2_step.stl"/>
+    <mesh file="assets/dm_j4340_2_step.stl"/>
+    <mesh file="assets/j1_d_1_step.stl"/>
+    <mesh file="assets/j1_a_1_step.stl"/>
+    <mesh file="assets/dm_j4340p_2_step.stl"/>
     <material name="j1_b_2_step_material" rgba="0.792157 0.819608 0.933333 1"/>
     <material name="hfsb6_6060_750_1_step_material" rgba="0.792157 0.819608 0.933333 1"/>
     <material name="dm_j8009p_2_step_material" rgba="0.792157 0.819608 0.933333 1"/>
