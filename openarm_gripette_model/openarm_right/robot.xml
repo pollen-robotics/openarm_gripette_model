@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
 <!-- Generated using onshape-to-robot -->
-<!-- Onshape https://cad.onshape.com/documents/8728c7fdb0e0b3c78180e1fb/w/70d590d987c43934e5d14436/e/c77dbd6d3fbd22e2e0636f89 -->
+<!-- Onshape https://cad.onshape.com/documents/8728c7fdb0e0b3c78180e1fb/w/b72c5d895a7b03d249830939/e/c77dbd6d3fbd22e2e0636f89 -->
 <mujoco model="openarm_right">
   <compiler angle="radian" autolimits="true"/>
   <default>
     <default class="openarm_right">
-      <joint frictionloss="0.1" armature="0.005"/>
-      <position kp="50" dampratio="1"/>
+      <joint frictionloss="0.1" armature="0.1"/>
+      <position kp="500" dampratio="1"/>
       <default class="visual">
         <geom type="mesh" contype="0" conaffinity="0" group="2"/>
       </default>
@@ -32,9 +32,9 @@
       <geom type="mesh" class="visual" pos="1e-12 3e-12 -0.008" quat="1 0 -0 -0" mesh="j1_a_1_step" material="j1_a_1_step_material"/>
       <geom type="mesh" class="collision" pos="1e-12 3e-12 -0.008" quat="1 0 -0 -0" mesh="j1_a_1_step" material="j1_a_1_step_material"/>
       <!-- Link dm_j8009p_2_step_1 -->
-      <body name="dm_j8009p_2_step_1" pos="-0 -0.0925 0.689" quat="0.707107 -0.707107 0 -0">
+      <body name="dm_j8009p_2_step_1" pos="-0 -0.0925 0.689" quat="0.707027 -0.707027 -0.0106446 -0.0106446">
         <!-- Joint from hfsb6_6060_750_1_step to dm_j8009p_2_step_1 -->
-        <joint axis="0 0 1" name="r_arm_pitch" type="hinge" range="-2.9999940913754926 0.9999863949301521"/>
+        <joint axis="0 0 1" name="r_arm_pitch" type="hinge" range="-2.9698853532148264 1.0300951330908181"/>
         <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
         <!-- Part dm_j8009p_2_step_1 -->
         <geom type="mesh" class="visual" pos="1e-12 0.697 0.0925" quat="0.707107 0.707107 -0 0" mesh="dm_j8009p_2_step_1" material="dm_j8009p_2_step_1_material"/>
@@ -49,9 +49,9 @@
         <geom type="mesh" class="visual" pos="1e-12 0.697 0.0925" quat="0.707107 0.707107 -0 0" mesh="j1_c_1_step" material="j1_c_1_step_material"/>
         <geom type="mesh" class="collision" pos="1e-12 0.697 0.0925" quat="0.707107 0.707107 -0 0" mesh="j1_c_1_step" material="j1_c_1_step_material"/>
         <!-- Link j2_b_2_step -->
-        <body name="j2_b_2_step" pos="-0.0301 0 -0.06" quat="0 -0.707107 0 -0.707107">
+        <body name="j2_b_2_step" pos="-0.0301 -0 -0.06" quat="0.00558855 -0.707085 0.00558855 -0.707085">
           <!-- Joint from dm_j8009p_2_step_1 to j2_b_2_step -->
-          <joint axis="0 0 1" name="r_arm_roll" type="hinge" range="-3.3161255787892263 0.17453292519943295"/>
+          <joint axis="0 0 1" name="r_arm_roll" type="hinge" range="-3.3319325592350166 0.1587259447536428"/>
           <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
           <!-- Part j2_a_1_step -->
           <geom type="mesh" class="visual" pos="0.1525 -0.697 0.0301" quat="0.5 -0.5 -0.5 -0.5" mesh="j2_a_1_step" material="j2_a_1_step_material"/>
@@ -65,27 +65,27 @@
           <!-- Link dm_j4340_2_step -->
           <body name="dm_j4340_2_step" pos="-0 -0.06625 0.0301" quat="0.5 -0.5 -0.5 -0.5">
             <!-- Joint from j2_b_2_step to dm_j4340_2_step -->
-            <joint axis="0 0 1" name="r_arm_yaw" type="hinge" range="-1.5707963267948948 1.5707963267948983"/>
+            <joint axis="0 0 1" name="r_arm_yaw" type="hinge" range="-1.567545835500403 1.57404681808939"/>
             <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
             <!-- Part dm_j4340p_2_step -->
-            <geom type="mesh" class="visual" pos="1e-12 0.1525 -0.63075" quat="1 0 -0 -0" mesh="dm_j4340p_2_step" material="dm_j4340p_2_step_material"/>
-            <geom type="mesh" class="collision" pos="1e-12 0.1525 -0.63075" quat="1 0 -0 -0" mesh="dm_j4340p_2_step" material="dm_j4340p_2_step_material"/>
+            <geom type="mesh" class="visual" pos="0.000495699 0.152499 -0.63075" quat="0.999999 0 -0 -0.00162524" mesh="dm_j4340p_2_step" material="dm_j4340p_2_step_material"/>
+            <geom type="mesh" class="collision" pos="0.000495699 0.152499 -0.63075" quat="0.999999 0 -0 -0.00162524" mesh="dm_j4340p_2_step" material="dm_j4340p_2_step_material"/>
             <!-- Part fl6803zz_2_step -->
-            <geom type="mesh" class="visual" pos="1e-12 0.1525 -0.63075" quat="1 0 -0 -0" mesh="fl6803zz_2_step" material="fl6803zz_2_step_material"/>
-            <geom type="mesh" class="collision" pos="1e-12 0.1525 -0.63075" quat="1 0 -0 -0" mesh="fl6803zz_2_step" material="fl6803zz_2_step_material"/>
+            <geom type="mesh" class="visual" pos="0.000495699 0.152499 -0.63075" quat="0.999999 0 -0 -0.00162524" mesh="fl6803zz_2_step" material="fl6803zz_2_step_material"/>
+            <geom type="mesh" class="collision" pos="0.000495699 0.152499 -0.63075" quat="0.999999 0 -0 -0.00162524" mesh="fl6803zz_2_step" material="fl6803zz_2_step_material"/>
             <!-- Part j4_a_2_step -->
-            <geom type="mesh" class="visual" pos="1e-12 0.1525 -0.63075" quat="1 0 -0 -0" mesh="j4_a_2_step" material="j4_a_2_step_material"/>
-            <geom type="mesh" class="collision" pos="1e-12 0.1525 -0.63075" quat="1 0 -0 -0" mesh="j4_a_2_step" material="j4_a_2_step_material"/>
+            <geom type="mesh" class="visual" pos="0.000495699 0.152499 -0.63075" quat="0.999999 0 -0 -0.00162524" mesh="j4_a_2_step" material="j4_a_2_step_material"/>
+            <geom type="mesh" class="collision" pos="0.000495699 0.152499 -0.63075" quat="0.999999 0 -0 -0.00162524" mesh="j4_a_2_step" material="j4_a_2_step_material"/>
             <!-- Part dm_j4340_2_step -->
-            <geom type="mesh" class="visual" pos="1e-12 0.1525 -0.63075" quat="1 0 -0 -0" mesh="dm_j4340_2_step" material="dm_j4340_2_step_material"/>
-            <geom type="mesh" class="collision" pos="1e-12 0.1525 -0.63075" quat="1 0 -0 -0" mesh="dm_j4340_2_step" material="dm_j4340_2_step_material"/>
+            <geom type="mesh" class="visual" pos="0.000495699 0.152499 -0.63075" quat="0.999999 0 -0 -0.00162524" mesh="dm_j4340_2_step" material="dm_j4340_2_step_material"/>
+            <geom type="mesh" class="collision" pos="0.000495699 0.152499 -0.63075" quat="0.999999 0 -0 -0.00162524" mesh="dm_j4340_2_step" material="dm_j4340_2_step_material"/>
             <!-- Part j4_b_2_step -->
-            <geom type="mesh" class="visual" pos="1e-12 0.1525 -0.63075" quat="1 0 -0 -0" mesh="j4_b_2_step" material="j4_b_2_step_material"/>
-            <geom type="mesh" class="collision" pos="1e-12 0.1525 -0.63075" quat="1 0 -0 -0" mesh="j4_b_2_step" material="j4_b_2_step_material"/>
+            <geom type="mesh" class="visual" pos="0.000495699 0.152499 -0.63075" quat="0.999999 0 -0 -0.00162524" mesh="j4_b_2_step" material="j4_b_2_step_material"/>
+            <geom type="mesh" class="collision" pos="0.000495699 0.152499 -0.63075" quat="0.999999 0 -0 -0.00162524" mesh="j4_b_2_step" material="j4_b_2_step_material"/>
             <!-- Link dm_j4310_1_2_step -->
-            <body name="dm_j4310_1_2_step" pos="0 -0.03155 -0.15375" quat="0.707107 -0.707107 -0 -0">
+            <body name="dm_j4310_1_2_step" pos="-0.000102553 -0.0315498 -0.15375" quat="0.707106 -0.707106 0.00114922 -0.00114922">
               <!-- Joint from dm_j4340_2_step to dm_j4310_1_2_step -->
-              <joint axis="0 0 1" name="r_elbow" type="hinge" range="-2.4434609527920603 8.881784197001252e-16"/>
+              <joint axis="0 0 1" name="r_elbow" type="hinge" range="-2.4434609527920044 5.684341886080802e-14"/>
               <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
               <!-- Part j4_d_2_step -->
               <geom type="mesh" class="visual" pos="1e-12 0.477 0.18405" quat="0.707107 0.707107 -0 0" mesh="j4_d_2_step" material="j4_d_2_step_material"/>
@@ -102,37 +102,37 @@
               <!-- Link j6_a_3_step -->
               <body name="j6_a_3_step" pos="-0 0.0955 0.0315" quat="0.707107 0.707107 0 0">
                 <!-- Joint from dm_j4310_1_2_step to j6_a_3_step -->
-                <joint axis="0 0 1" name="r_wrist_yaw" type="hinge" range="-1.5707963267948957 1.5707963267948974"/>
+                <joint axis="0 0 1" name="r_wrist_yaw" type="hinge" range="-1.5724343476473788 1.5691583059424143"/>
                 <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
                 <!-- Part j6_d_3_step -->
-                <geom type="mesh" class="visual" pos="1e-12 0.15255 -0.3815" quat="1 0 -0 0" mesh="j6_d_3_step" material="j6_d_3_step_material"/>
-                <geom type="mesh" class="collision" pos="1e-12 0.15255 -0.3815" quat="1 0 -0 0" mesh="j6_d_3_step" material="j6_d_3_step_material"/>
+                <geom type="mesh" class="visual" pos="-0.00024988 0.15255 -0.3815" quat="1 0 -0 0.00081901" mesh="j6_d_3_step" material="j6_d_3_step_material"/>
+                <geom type="mesh" class="collision" pos="-0.00024988 0.15255 -0.3815" quat="1 0 -0 0.00081901" mesh="j6_d_3_step" material="j6_d_3_step_material"/>
                 <!-- Part dm_j4310_1_2_step_1 -->
-                <geom type="mesh" class="visual" pos="1e-12 0.15255 -0.3815" quat="1 0 -0 0" mesh="dm_j4310_1_2_step_1" material="dm_j4310_1_2_step_1_material"/>
-                <geom type="mesh" class="collision" pos="1e-12 0.15255 -0.3815" quat="1 0 -0 0" mesh="dm_j4310_1_2_step_1" material="dm_j4310_1_2_step_1_material"/>
+                <geom type="mesh" class="visual" pos="-0.00024988 0.15255 -0.3815" quat="1 0 -0 0.00081901" mesh="dm_j4310_1_2_step_1" material="dm_j4310_1_2_step_1_material"/>
+                <geom type="mesh" class="collision" pos="-0.00024988 0.15255 -0.3815" quat="1 0 -0 0.00081901" mesh="dm_j4310_1_2_step_1" material="dm_j4310_1_2_step_1_material"/>
                 <!-- Part j6_b_3_step -->
-                <geom type="mesh" class="visual" pos="1e-12 0.15255 -0.3815" quat="1 0 -0 -0" mesh="j6_b_3_step" material="j6_b_3_step_material"/>
-                <geom type="mesh" class="collision" pos="1e-12 0.15255 -0.3815" quat="1 0 -0 -0" mesh="j6_b_3_step" material="j6_b_3_step_material"/>
+                <geom type="mesh" class="visual" pos="-0.00024988 0.15255 -0.3815" quat="1 0 -0 0.00081901" mesh="j6_b_3_step" material="j6_b_3_step_material"/>
+                <geom type="mesh" class="collision" pos="-0.00024988 0.15255 -0.3815" quat="1 0 -0 0.00081901" mesh="j6_b_3_step" material="j6_b_3_step_material"/>
                 <!-- Part j5_a_3_step -->
-                <geom type="mesh" class="visual" pos="1e-12 0.15255 -0.3815" quat="1 -0 -0 0" mesh="j5_a_3_step" material="j5_a_3_step_material"/>
-                <geom type="mesh" class="collision" pos="1e-12 0.15255 -0.3815" quat="1 -0 -0 0" mesh="j5_a_3_step" material="j5_a_3_step_material"/>
+                <geom type="mesh" class="visual" pos="-0.00024988 0.15255 -0.3815" quat="1 0 -0 0.00081901" mesh="j5_a_3_step" material="j5_a_3_step_material"/>
+                <geom type="mesh" class="collision" pos="-0.00024988 0.15255 -0.3815" quat="1 0 -0 0.00081901" mesh="j5_a_3_step" material="j5_a_3_step_material"/>
                 <!-- Part j6_a_3_step -->
-                <geom type="mesh" class="visual" pos="1e-12 0.15255 -0.3815" quat="1 0 -0 0" mesh="j6_a_3_step" material="j6_a_3_step_material"/>
-                <geom type="mesh" class="collision" pos="1e-12 0.15255 -0.3815" quat="1 0 -0 0" mesh="j6_a_3_step" material="j6_a_3_step_material"/>
+                <geom type="mesh" class="visual" pos="-0.00024988 0.15255 -0.3815" quat="1 0 -0 0.00081901" mesh="j6_a_3_step" material="j6_a_3_step_material"/>
+                <geom type="mesh" class="collision" pos="-0.00024988 0.15255 -0.3815" quat="1 0 -0 0.00081901" mesh="j6_a_3_step" material="j6_a_3_step_material"/>
                 <!-- Part j6_c_right_2_step -->
-                <geom type="mesh" class="visual" pos="1e-12 0.15255 -0.3815" quat="1 0 -0 -0" mesh="j6_c_right_2_step" material="j6_c_right_2_step_material"/>
-                <geom type="mesh" class="collision" pos="1e-12 0.15255 -0.3815" quat="1 0 -0 -0" mesh="j6_c_right_2_step" material="j6_c_right_2_step_material"/>
+                <geom type="mesh" class="visual" pos="-0.00024988 0.15255 -0.3815" quat="1 0 -0 0.00081901" mesh="j6_c_right_2_step" material="j6_c_right_2_step_material"/>
+                <geom type="mesh" class="collision" pos="-0.00024988 0.15255 -0.3815" quat="1 0 -0 0.00081901" mesh="j6_c_right_2_step" material="j6_c_right_2_step_material"/>
                 <!-- Link j7_e_2_step -->
-                <body name="j7_e_2_step" pos="0.0172 -0 -0.0455" quat="0.5 -0.5 -0.5 0.5">
+                <body name="j7_e_2_step" pos="0.0172 2.81739e-05 -0.0455" quat="0.496779 -0.502386 -0.497603 0.5032">
                   <!-- Joint from j6_a_3_step to j7_e_2_step -->
-                  <joint axis="0 0 1" name="r_wrist_roll" type="hinge" range="-0.785398 0.785398"/>
+                  <joint axis="0 0 1" name="r_wrist_roll" type="hinge" range="-0.7966021618003796 0.7741938381996205"/>
                   <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
                   <!-- Part j7_e_2_step -->
                   <geom type="mesh" class="visual" pos="0.15255 0.336 0.0172" quat="0.5 0.5 0.5 -0.5" mesh="j7_e_2_step" material="j7_e_2_step_material"/>
                   <geom type="mesh" class="collision" pos="0.15255 0.336 0.0172" quat="0.5 0.5 0.5 -0.5" mesh="j7_e_2_step" material="j7_e_2_step_material"/>
                 </body>
                 <!-- Link dm_j4310_1_2_step_2 -->
-                <body name="dm_j4310_1_2_step_2" pos="0.0343 -0 -0.1205" quat="0.5 -0.5 0.5 -0.5">
+                <body name="dm_j4310_1_2_step_2" pos="0.0343 5.61841e-05 -0.1205" quat="0.497603 -0.5032 0.496779 -0.502386">
                   <!-- Joint from j6_a_3_step to dm_j4310_1_2_step_2 -->
                   <joint axis="0 0 1" name="r_wrist_roll_mimic" type="hinge"/>
                   <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
@@ -158,63 +158,65 @@
                   <geom type="mesh" class="visual" pos="-0.15245 0.261 -0.0343" quat="0.5 0.5 0.5 -0.5" mesh="j7_b_2_step_2" material="j7_b_2_step_2_material"/>
                   <geom type="mesh" class="collision" pos="-0.15245 0.261 -0.0343" quat="0.5 0.5 0.5 -0.5" mesh="j7_b_2_step_2" material="j7_b_2_step_2_material"/>
                   <!-- Link gripper_base -->
-                  <body name="gripper_base" pos="0.0205 -0 -0.0343" quat="0.707107 0 -0.707107 -0">
+                  <body name="gripper_base" pos="0.0205 -0 -0.0343" quat="0.707052 -0.0087938 -0.707052 0.0087938">
                     <!-- Joint from dm_j4310_1_2_step_2 to gripper_base -->
-                    <joint axis="0 0 1" name="r_wrist_pitch" type="hinge" range="-1.5707963267948966 1.5707963267948966"/>
-                    <inertial pos="0.000529526 0.0844612 0.015076" mass="0.213224" fullinertia="0.000384882 0.000313838 0.0001816 6.86913e-07 3.22364e-06 -2.49811e-05"/>
+                    <joint axis="0 0 1" name="r_wrist_pitch" type="hinge" range="-1.595669601692545 1.5459230518972482"/>
+                    <inertial pos="0.000738567 0.084598 0.0158667" mass="0.208245" fullinertia="0.000366288 0.000294868 0.00017809 4.37234e-07 3.64051e-06 -3.03598e-05"/>
                     <!-- Part feetech_sts3215__configuration_default -->
-                    <geom type="mesh" class="visual" pos="0.00939992 0.0819874 -0.0103343" quat="0.704416 -0.0616311 -0.0616311 -0.704416" mesh="feetech_sts3215__configuration_default" material="feetech_sts3215__configuration_default_material"/>
-                    <geom type="mesh" class="collision" pos="0.00939992 0.0819874 -0.0103343" quat="0.704416 -0.0616311 -0.0616311 -0.704416" mesh="feetech_sts3215__configuration_default" material="feetech_sts3215__configuration_default_material"/>
+                    <geom type="mesh" class="visual" pos="0.00958442 0.0813874 -0.00876175" quat="0.704416 -0.0616284 -0.0616284 -0.704416" mesh="feetech_sts3215__configuration_default" material="feetech_sts3215__configuration_default_material"/>
+                    <geom type="mesh" class="collision" pos="0.00958442 0.0813874 -0.00876175" quat="0.704416 -0.0616284 -0.0616284 -0.704416" mesh="feetech_sts3215__configuration_default" material="feetech_sts3215__configuration_default_material"/>
                     <!-- Part j8_b_2_step -->
-                    <geom type="mesh" class="visual" pos="-9.99999e-07 0.260999 0.17305" quat="0.707107 0.707107 -0 -0" mesh="j8_b_2_step" material="j8_b_2_step_material"/>
-                    <geom type="mesh" class="collision" pos="-9.99999e-07 0.260999 0.17305" quat="0.707107 0.707107 -0 -0" mesh="j8_b_2_step" material="j8_b_2_step_material"/>
+                    <geom type="mesh" class="visual" pos="-9.99999e-07 0.260999 0.17305" quat="0.707107 0.707107 0 -0" mesh="j8_b_2_step" material="j8_b_2_step_material"/>
+                    <geom type="mesh" class="collision" pos="-9.99999e-07 0.260999 0.17305" quat="0.707107 0.707107 0 -0" mesh="j8_b_2_step" material="j8_b_2_step_material"/>
                     <!-- Part gripper_base -->
-                    <geom type="mesh" class="visual" pos="-0.0252001 0.127739 -0.01538" quat="0.707107 -2.70466e-06 0.707107 -2.70466e-06" mesh="gripper_base" material="gripper_base_material"/>
-                    <geom type="mesh" class="collision" pos="-0.0252001 0.127739 -0.01538" quat="0.707107 -2.70466e-06 0.707107 -2.70466e-06" mesh="gripper_base" material="gripper_base_material"/>
+                    <geom type="mesh" class="visual" pos="-0.0250156 0.122227 -0.00274613" quat="0.707107 0 0.707107 -0" mesh="gripper_base" material="gripper_base_material"/>
+                    <geom type="mesh" class="collision" pos="-0.0250156 0.122227 -0.00274613" quat="0.707107 0 0.707107 -0" mesh="gripper_base" material="gripper_base_material"/>
                     <!-- Part b0404 -->
-                    <geom type="mesh" class="visual" pos="0.0687999 0.0535004 0.0260817" quat="0.499998 -0.500002 0.500002 0.499998" mesh="b0404" material="b0404_material"/>
-                    <geom type="mesh" class="collision" pos="0.0687999 0.0535004 0.0260817" quat="0.499998 -0.500002 0.500002 0.499998" mesh="b0404" material="b0404_material"/>
+                    <geom type="mesh" class="visual" pos="0.0689844 0.0535 0.0278102" quat="0.5 -0.5 0.5 0.5" mesh="b0404" material="b0404_material"/>
+                    <geom type="mesh" class="collision" pos="0.0689844 0.0535 0.0278102" quat="0.5 -0.5 0.5 0.5" mesh="b0404" material="b0404_material"/>
                     <!-- Part camera_imu_support -->
-                    <geom type="mesh" class="visual" pos="0.0247999 0.122827 -0.00431896" quat="0.707107 -2.70466e-06 0.707107 -2.70466e-06" mesh="camera_imu_support" material="camera_imu_support_material"/>
-                    <geom type="mesh" class="collision" pos="0.0247999 0.122827 -0.00431896" quat="0.707107 -2.70466e-06 0.707107 -2.70466e-06" mesh="camera_imu_support" material="camera_imu_support_material"/>
+                    <geom type="mesh" class="visual" pos="0.0249844 0.122827 -0.00258992" quat="0.707107 0 0.707107 0" mesh="camera_imu_support" material="camera_imu_support_material"/>
+                    <geom type="mesh" class="collision" pos="0.0249844 0.122827 -0.00258992" quat="0.707107 0 0.707107 0" mesh="camera_imu_support" material="camera_imu_support_material"/>
                     <!-- Part j8_a_2_step -->
                     <geom type="mesh" class="visual" pos="1e-12 0.261 0.17305" quat="0.707107 0.707107 0 -0" mesh="j8_a_2_step" material="j8_a_2_step_material"/>
                     <geom type="mesh" class="collision" pos="1e-12 0.261 0.17305" quat="0.707107 0.707107 0 -0" mesh="j8_a_2_step" material="j8_a_2_step_material"/>
                     <!-- Part backplate -->
-                    <geom type="mesh" class="visual" pos="-0.0250001 0.127739 -0.01538" quat="0.707107 -2.70466e-06 0.707107 -2.70466e-06" mesh="backplate" material="backplate_material"/>
-                    <geom type="mesh" class="collision" pos="-0.0250001 0.127739 -0.01538" quat="0.707107 -2.70466e-06 0.707107 -2.70466e-06" mesh="backplate" material="backplate_material"/>
+                    <geom type="mesh" class="visual" pos="-0.0250156 0.122227 -0.00274613" quat="0.707107 0 0.707107 0" mesh="backplate" material="backplate_material"/>
+                    <geom type="mesh" class="collision" pos="-0.0250156 0.122227 -0.00274613" quat="0.707107 0 0.707107 0" mesh="backplate" material="backplate_material"/>
                     <!-- Frame openarm_fix -->
                     <site group="3" name="openarm_fix" pos="-0 0.0495 0.0205" quat="0.5 0.5 0.5 -0.5"/>
                     <!-- Frame camera -->
-                    <site group="3" name="camera" pos="0.0687999 0.0662004 0.0260816" quat="0.499998 -0.500002 0.500002 0.499998"/>
+                    <site group="3" name="camera" pos="0.0689844 0.0662 0.0278102" quat="0.5 -0.5 0.5 0.5"/>
                     <!-- Gripette camera (180° pitch correction from site frame to MuJoCo camera convention) -->
                     <!-- fovy=130° for wide pinhole render, fisheye distortion applied in post -->
                     <camera name="gripette_cam" pos="0.0687999 0.0662004 0.0260816" quat="0.500002 0.499998 0.499998 -0.500002" fovy="130"/>
+                    <!-- Frame gripper -->
+                    <site group="3" name="gripper" pos="-0 0.1395 0.0305" quat="0.5 -0.5 0.5 0.5"/>
                     <!-- Link feetech_sts3215__configuration_default -->
-                    <body name="feetech_sts3215__configuration_default" pos="0.0177499 0.1071 -0.0147625" quat="0.0616284 0.704416 -0.0616284 -0.704416">
+                    <body name="feetech_sts3215__configuration_default" pos="0.0179344 0.1065 -0.0131898" quat="0.0616284 0.704416 -0.0616284 -0.704416">
                       <!-- Joint from gripper_base to feetech_sts3215__configuration_default -->
-                      <joint axis="0 0 1" name="proximal" type="hinge" range="-1.5707886768702002 7.649924696373489e-06"/>
-                      <inertial pos="0.0182592 -0.0259026 0.0175524" mass="0.101487" fullinertia="5.99713e-05 4.50716e-05 3.99848e-05 6.78604e-06 -4.30903e-07 1.10027e-06"/>
+                      <joint axis="0 0 1" name="proximal" type="hinge" range="-1.5707963267948966 0.0"/>
+                      <inertial pos="0.0182944 -0.0259223 0.0175868" mass="0.100722" fullinertia="5.94511e-05 4.45642e-05 3.97205e-05 6.81532e-06 -4.17039e-07 1.07118e-06"/>
                       <!-- Part proximal_side -->
-                      <geom type="mesh" class="visual" pos="-0.00297594 -0.0204326 0.0435" quat="0 -0.996195 0.0871557 0" mesh="proximal_side" material="proximal_side_material"/>
-                      <geom type="mesh" class="collision" pos="-0.00297594 -0.0204326 0.0435" quat="0 -0.996195 0.0871557 0" mesh="proximal_side" material="proximal_side_material"/>
+                      <geom type="mesh" class="visual" pos="-0.013016 -0.0136749 0.0435" quat="0 0.996195 -0.0871557 -0" mesh="proximal_side" material="proximal_side_material"/>
+                      <geom type="mesh" class="collision" pos="-0.013016 -0.0136749 0.0435" quat="0 0.996195 -0.0871557 -0" mesh="proximal_side" material="proximal_side_material"/>
                       <!-- Part proximal_bottom -->
-                      <geom type="mesh" class="visual" pos="-0.00297594 -0.0204326 0.0435" quat="0 -0.996195 0.0871557 0" mesh="proximal_bottom" material="proximal_bottom_material"/>
-                      <geom type="mesh" class="collision" pos="-0.00297594 -0.0204326 0.0435" quat="0 -0.996195 0.0871557 0" mesh="proximal_bottom" material="proximal_bottom_material"/>
+                      <geom type="mesh" class="visual" pos="-0.013016 -0.0136749 0.0435" quat="0 0.996195 -0.0871557 -0" mesh="proximal_bottom" material="proximal_bottom_material"/>
+                      <geom type="mesh" class="collision" pos="-0.013016 -0.0136749 0.0435" quat="0 0.996195 -0.0871557 -0" mesh="proximal_bottom" material="proximal_bottom_material"/>
                       <!-- Part feetech_sts3215__configuration_default_2 -->
-                      <geom type="mesh" class="visual" pos="0.0122498 -0.0212176 0.0089" quat="0.353553 -0.353553 -0.612372 0.612372" mesh="feetech_sts3215__configuration_default" material="feetech_sts3215__configuration_default_material"/>
-                      <geom type="mesh" class="collision" pos="0.0122498 -0.0212176 0.0089" quat="0.353553 -0.353553 -0.612372 0.612372" mesh="feetech_sts3215__configuration_default" material="feetech_sts3215__configuration_default_material"/>
+                      <geom type="mesh" class="visual" pos="0.01225 -0.0212176 0.0089" quat="0.353553 -0.353553 -0.612372 0.612372" mesh="feetech_sts3215__configuration_default" material="feetech_sts3215__configuration_default_material"/>
+                      <geom type="mesh" class="collision" pos="0.01225 -0.0212176 0.0089" quat="0.353553 -0.353553 -0.612372 0.612372" mesh="feetech_sts3215__configuration_default" material="feetech_sts3215__configuration_default_material"/>
                       <!-- Part proximal_top -->
-                      <geom type="mesh" class="visual" pos="-0.00297594 -0.0204326 0.0435" quat="0 -0.996195 0.0871557 -0" mesh="proximal_top" material="proximal_top_material"/>
-                      <geom type="mesh" class="collision" pos="-0.00297594 -0.0204326 0.0435" quat="0 -0.996195 0.0871557 -0" mesh="proximal_top" material="proximal_top_material"/>
+                      <geom type="mesh" class="visual" pos="-0.013016 -0.0136749 0.0435" quat="0 -0.996195 0.0871557 0" mesh="proximal_top" material="proximal_top_material"/>
+                      <geom type="mesh" class="collision" pos="-0.013016 -0.0136749 0.0435" quat="0 -0.996195 0.0871557 0" mesh="proximal_top" material="proximal_top_material"/>
                       <!-- Link distal -->
-                      <body name="distal" pos="0.0249998 -0.0433013 -0.00055" quat="0.5 0 0 0.866025">
+                      <body name="distal" pos="0.025 -0.0433013 -0.00055" quat="0.5 -0 0 0.866025">
                         <!-- Joint from feetech_sts3215__configuration_default to distal -->
-                        <joint axis="0 0 1" name="distal" type="hinge" range="-2.0943951023931953 0.0"/>
-                        <inertial pos="-0.0288978 0.00403421 0.0180018" mass="0.0471678" fullinertia="1.19203e-05 1.88956e-05 1.16157e-05 2.06538e-06 3.61884e-07 1.38375e-07"/>
+                        <joint axis="0 0 1" name="distal" type="hinge" range="-2.0943951023931944 8.881784197001252e-16"/>
+                        <inertial pos="-0.0264976 0.00403103 0.0179373" mass="0.0417207" fullinertia="1.10253e-05 1.6107e-05 9.41129e-06 2.04438e-06 3.05704e-07 1.39544e-07"/>
                         <!-- Part distal -->
-                        <geom type="mesh" class="visual" pos="0.0337928 0.0127932 0.0435" quat="0 0.422618 -0.906308 0" mesh="distal" material="distal_material"/>
-                        <geom type="mesh" class="collision" pos="0.0337928 0.0127932 0.0435" quat="0 0.422618 -0.906308 0" mesh="distal" material="distal_material"/>
+                        <geom type="mesh" class="visual" pos="0.0446652 0.0181096 0.0435" quat="0 -0.422618 0.906308 -0" mesh="distal" material="distal_material"/>
+                        <geom type="mesh" class="collision" pos="0.0446652 0.0181096 0.0435" quat="0 -0.422618 0.906308 -0" mesh="distal" material="distal_material"/>
                       </body>
                     </body>
                   </body>
@@ -227,51 +229,51 @@
     </body>
   </worldbody>
   <asset>
-    <mesh file="assets/b0404.stl"/>
-    <mesh file="assets/j6_d_3_step.stl"/>
-    <mesh file="assets/camera_imu_support.stl"/>
-    <mesh file="assets/j5_a_3_step.stl"/>
-    <mesh file="assets/j7_b_2_step.stl"/>
-    <mesh file="assets/proximal_side.stl"/>
-    <mesh file="assets/j1_e_1_step.stl"/>
-    <mesh file="assets/j4_b_2_step.stl"/>
-    <mesh file="assets/j2_b_2_step.stl"/>
-    <mesh file="assets/j1_b_2_step.stl"/>
-    <mesh file="assets/j7_e_2_step.stl"/>
-    <mesh file="assets/fl6700zz_2_step.stl"/>
-    <mesh file="assets/hfsb6_6060_750_1_step.stl"/>
-    <mesh file="assets/backplate.stl"/>
-    <mesh file="assets/dm_j4310_1_2_step.stl"/>
-    <mesh file="assets/proximal_top.stl"/>
-    <mesh file="assets/j4_a_2_step.stl"/>
+    <mesh file="assets/dm_j8009p_2_step_1.stl"/>
     <mesh file="assets/j8_a_2_step.stl"/>
-    <mesh file="assets/j7_a_2_step.stl"/>
-    <mesh file="assets/j4_c_2_step.stl"/>
-    <mesh file="assets/distal.stl"/>
-    <mesh file="assets/j1_c_1_step.stl"/>
+    <mesh file="assets/backplate.stl"/>
+    <mesh file="assets/j6_b_3_step.stl"/>
+    <mesh file="assets/proximal_side.stl"/>
+    <mesh file="assets/j6_d_3_step.stl"/>
     <mesh file="assets/j6_a_3_step.stl"/>
+    <mesh file="assets/feetech_sts3215__configuration_default.stl"/>
+    <mesh file="assets/j4_c_2_step.stl"/>
+    <mesh file="assets/hfsb6_6060_750_1_step.stl"/>
+    <mesh file="assets/j1_c_1_step.stl"/>
+    <mesh file="assets/j7_a_2_step.stl"/>
+    <mesh file="assets/proximal_top.stl"/>
+    <mesh file="assets/j4_e_2_step.stl"/>
+    <mesh file="assets/fl6700zz_2_step_1.stl"/>
+    <mesh file="assets/j7_b_2_step.stl"/>
+    <mesh file="assets/j2_b_2_step.stl"/>
     <mesh file="assets/j6_c_right_2_step.stl"/>
-    <mesh file="assets/j2_c_2_step.stl"/>
+    <mesh file="assets/j2_a_1_step.stl"/>
+    <mesh file="assets/fl6803zz_2_step.stl"/>
+    <mesh file="assets/j1_e_1_step.stl"/>
+    <mesh file="assets/dm_j4310_1_2_step_2.stl"/>
     <mesh file="assets/j7_b_2_step_2.stl"/>
     <mesh file="assets/j8_b_2_step.stl"/>
-    <mesh file="assets/j7_c_2_step.stl"/>
-    <mesh file="assets/fl6700zz_2_step_1.stl"/>
+    <mesh file="assets/j1_b_2_step.stl"/>
+    <mesh file="assets/camera_imu_support.stl"/>
     <mesh file="assets/proximal_bottom.stl"/>
-    <mesh file="assets/gripper_base.stl"/>
-    <mesh file="assets/feetech_sts3215__configuration_default.stl"/>
-    <mesh file="assets/j6_b_3_step.stl"/>
-    <mesh file="assets/dm_j4310_1_2_step_1.stl"/>
-    <mesh file="assets/j2_a_1_step.stl"/>
-    <mesh file="assets/dm_j8009p_2_step.stl"/>
-    <mesh file="assets/dm_j4310_1_2_step_2.stl"/>
-    <mesh file="assets/j4_e_2_step.stl"/>
-    <mesh file="assets/dm_j8009p_2_step_1.stl"/>
+    <mesh file="assets/j2_c_2_step.stl"/>
+    <mesh file="assets/j7_c_2_step.stl"/>
     <mesh file="assets/j4_d_2_step.stl"/>
-    <mesh file="assets/fl6803zz_2_step.stl"/>
+    <mesh file="assets/fl6700zz_2_step.stl"/>
+    <mesh file="assets/j4_b_2_step.stl"/>
+    <mesh file="assets/dm_j4310_1_2_step.stl"/>
+    <mesh file="assets/j4_a_2_step.stl"/>
+    <mesh file="assets/b0404.stl"/>
+    <mesh file="assets/dm_j4340p_2_step.stl"/>
+    <mesh file="assets/j5_a_3_step.stl"/>
+    <mesh file="assets/j7_e_2_step.stl"/>
+    <mesh file="assets/dm_j8009p_2_step.stl"/>
+    <mesh file="assets/distal.stl"/>
+    <mesh file="assets/dm_j4310_1_2_step_1.stl"/>
     <mesh file="assets/dm_j4340_2_step.stl"/>
+    <mesh file="assets/gripper_base.stl"/>
     <mesh file="assets/j1_d_1_step.stl"/>
     <mesh file="assets/j1_a_1_step.stl"/>
-    <mesh file="assets/dm_j4340p_2_step.stl"/>
     <material name="j1_b_2_step_material" rgba="0.792157 0.819608 0.933333 1"/>
     <material name="hfsb6_6060_750_1_step_material" rgba="0.792157 0.819608 0.933333 1"/>
     <material name="dm_j8009p_2_step_material" rgba="0.792157 0.819608 0.933333 1"/>

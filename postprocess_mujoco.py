@@ -10,7 +10,9 @@ It applies the following patches to robot.xml:
 2. Set contype="2" conaffinity="1" on the collision geom class
    → prevents self-collision between adjacent robot links (CAD mesh overlaps)
 
-3. Add the Gripette camera element next to the camera site
+3. Increase actuator gains (kp 50 → 500) for stiffer position tracking in simulation
+
+4. Add the Gripette camera element next to the camera site
    → MuJoCo camera for offscreen rendering (with 180° pitch correction and wide FOV)
 
 Usage:
@@ -60,7 +62,19 @@ def postprocess():
         text,
     )
 
-    # 3. Add Gripette camera after the camera site (if not already present)
+    # 3. Increase armature and actuator gains for stiffer tracking (simulation only)
+    text = re.sub(
+        r'<joint frictionloss="0.1" armature="0.005"/>',
+        '<joint frictionloss="0.1" armature="0.1"/>',
+        text,
+    )
+    text = re.sub(
+        r'<position kp="50"',
+        '<position kp="500"',
+        text,
+    )
+
+    # 4. Add Gripette camera after the camera site (if not already present)
     if "gripette_cam" not in text:
         # Find the camera site line and insert after it
         camera_site_pattern = r'(<!-- Frame camera -->\n\s*<site group="3" name="camera"[^/]*/>\n)'
