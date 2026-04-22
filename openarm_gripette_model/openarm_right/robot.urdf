@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/8728c7fdb0e0b3c78180e1fb/w/b72c5d895a7b03d249830939/e/c77dbd6d3fbd22e2e0636f89 -->
-<robot name="openarm_right">
+<robot name="robot">
   <!-- Link hfsb6_6060_750_1_step -->
   <link name="hfsb6_6060_750_1_step">
     <inertial>
@@ -9,68 +9,20 @@
       <mass value="1e-09"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
-    <!-- Part j1_b_2_step -->
+    <!-- Part hfsb6_6060_750_1_step_parts -->
     <visual>
-      <origin xyz="1e-12 3e-12 -0.008" rpy="0 0 -0"/>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/j1_b_2_step.stl"/>
+        <mesh filename="package://assets/merged/hfsb6_6060_750_1_step_visual.stl"/>
       </geometry>
-      <material name="j1_b_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="hfsb6_6060_750_1_step_parts_material">
+        <color rgba="1.0 1.0 1.0 1.0"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="1e-12 3e-12 -0.008" rpy="0 0 -0"/>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/j1_b_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part hfsb6_6060_750_1_step -->
-    <visual>
-      <origin xyz="-4e-12 -3e-12 0.758" rpy="-3.14159 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="package://assets/hfsb6_6060_750_1_step.stl"/>
-      </geometry>
-      <material name="hfsb6_6060_750_1_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-4e-12 -3e-12 0.758" rpy="-3.14159 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="package://assets/hfsb6_6060_750_1_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part dm_j8009p_2_step -->
-    <visual>
-      <origin xyz="1e-12 3e-12 -0.008" rpy="0 0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/dm_j8009p_2_step.stl"/>
-      </geometry>
-      <material name="dm_j8009p_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="1e-12 3e-12 -0.008" rpy="0 0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/dm_j8009p_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j1_a_1_step -->
-    <visual>
-      <origin xyz="1e-12 3e-12 -0.008" rpy="0 -0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j1_a_1_step.stl"/>
-      </geometry>
-      <material name="j1_a_1_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="1e-12 3e-12 -0.008" rpy="0 -0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j1_a_1_step.stl"/>
+        <mesh filename="package://assets/merged/hfsb6_6060_750_1_step_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -81,68 +33,20 @@
       <mass value="1e-09"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
-    <!-- Part dm_j8009p_2_step_1 -->
+    <!-- Part dm_j8009p_2_step_1_parts -->
     <visual>
-      <origin xyz="1e-12 0.697 0.0925" rpy="1.5708 -0 -0"/>
+      <origin xyz="-0.0207418 -0.688688 -0.0925" rpy="-1.5708 0 -0.0301087"/>
       <geometry>
-        <mesh filename="package://assets/dm_j8009p_2_step_1.stl"/>
+        <mesh filename="package://assets/merged/dm_j8009p_2_step_1_visual.stl"/>
       </geometry>
-      <material name="dm_j8009p_2_step_1_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="dm_j8009p_2_step_1_parts_material">
+        <color rgba="1.0 1.0 1.0 1.0"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="1e-12 0.697 0.0925" rpy="1.5708 -0 -0"/>
+      <origin xyz="-0.0207418 -0.688688 -0.0925" rpy="-1.5708 0 -0.0301087"/>
       <geometry>
-        <mesh filename="package://assets/dm_j8009p_2_step_1.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j1_e_1_step -->
-    <visual>
-      <origin xyz="1e-12 0.697 0.0925" rpy="1.5708 -0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j1_e_1_step.stl"/>
-      </geometry>
-      <material name="j1_e_1_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="1e-12 0.697 0.0925" rpy="1.5708 -0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j1_e_1_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j1_d_1_step -->
-    <visual>
-      <origin xyz="1e-12 0.697 0.0925" rpy="1.5708 -0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j1_d_1_step.stl"/>
-      </geometry>
-      <material name="j1_d_1_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="1e-12 0.697 0.0925" rpy="1.5708 -0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j1_d_1_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j1_c_1_step -->
-    <visual>
-      <origin xyz="1e-12 0.697 0.0925" rpy="1.5708 -0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j1_c_1_step.stl"/>
-      </geometry>
-      <material name="j1_c_1_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="1e-12 0.697 0.0925" rpy="1.5708 -0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j1_c_1_step.stl"/>
+        <mesh filename="package://assets/merged/dm_j8009p_2_step_1_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -153,52 +57,20 @@
       <mass value="1e-09"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
-    <!-- Part j2_a_1_step -->
+    <!-- Part j2_b_2_step_parts -->
     <visual>
-      <origin xyz="0.1525 -0.697 0.0301" rpy="-1.5708 -1.5708 0"/>
+      <origin xyz="0.141595 0.691012 -0.00935821" rpy="3.14159 1.54069 1.5866"/>
       <geometry>
-        <mesh filename="package://assets/j2_a_1_step.stl"/>
+        <mesh filename="package://assets/merged/j2_b_2_step_visual.stl"/>
       </geometry>
-      <material name="j2_a_1_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="j2_b_2_step_parts_material">
+        <color rgba="1.0 1.0 1.0 1.0"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.1525 -0.697 0.0301" rpy="-1.5708 -1.5708 0"/>
+      <origin xyz="0.141595 0.691012 -0.00935821" rpy="3.14159 1.54069 1.5866"/>
       <geometry>
-        <mesh filename="package://assets/j2_a_1_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j2_c_2_step -->
-    <visual>
-      <origin xyz="0.1525 -0.697 0.0301" rpy="-1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/j2_c_2_step.stl"/>
-      </geometry>
-      <material name="j2_c_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.1525 -0.697 0.0301" rpy="-1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/j2_c_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j2_b_2_step -->
-    <visual>
-      <origin xyz="0.1525 -0.697 0.0301" rpy="-1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/j2_b_2_step.stl"/>
-      </geometry>
-      <material name="j2_b_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.1525 -0.697 0.0301" rpy="-1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/j2_b_2_step.stl"/>
+        <mesh filename="package://assets/merged/j2_b_2_step_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -209,84 +81,20 @@
       <mass value="1e-09"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
-    <!-- Part dm_j4340p_2_step -->
+    <!-- Part dm_j4340_2_step_parts -->
     <visual>
-      <origin xyz="0.000495699 0.152499 -0.63075" rpy="0 -0 -0.00325049"/>
+      <origin xyz="-0.0207418 0.141595 -0.624762" rpy="-0.0158141 0.030105 -0.000476052"/>
       <geometry>
-        <mesh filename="package://assets/dm_j4340p_2_step.stl"/>
+        <mesh filename="package://assets/merged/dm_j4340_2_step_visual.stl"/>
       </geometry>
-      <material name="dm_j4340p_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="dm_j4340_2_step_parts_material">
+        <color rgba="1.0 1.0 1.0 1.0"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.000495699 0.152499 -0.63075" rpy="0 -0 -0.00325049"/>
+      <origin xyz="-0.0207418 0.141595 -0.624762" rpy="-0.0158141 0.030105 -0.000476052"/>
       <geometry>
-        <mesh filename="package://assets/dm_j4340p_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part fl6803zz_2_step -->
-    <visual>
-      <origin xyz="0.000495699 0.152499 -0.63075" rpy="0 -0 -0.00325049"/>
-      <geometry>
-        <mesh filename="package://assets/fl6803zz_2_step.stl"/>
-      </geometry>
-      <material name="fl6803zz_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.000495699 0.152499 -0.63075" rpy="0 -0 -0.00325049"/>
-      <geometry>
-        <mesh filename="package://assets/fl6803zz_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j4_a_2_step -->
-    <visual>
-      <origin xyz="0.000495699 0.152499 -0.63075" rpy="0 -0 -0.00325049"/>
-      <geometry>
-        <mesh filename="package://assets/j4_a_2_step.stl"/>
-      </geometry>
-      <material name="j4_a_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.000495699 0.152499 -0.63075" rpy="0 -0 -0.00325049"/>
-      <geometry>
-        <mesh filename="package://assets/j4_a_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part dm_j4340_2_step -->
-    <visual>
-      <origin xyz="0.000495699 0.152499 -0.63075" rpy="0 -0 -0.00325049"/>
-      <geometry>
-        <mesh filename="package://assets/dm_j4340_2_step.stl"/>
-      </geometry>
-      <material name="dm_j4340_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.000495699 0.152499 -0.63075" rpy="0 -0 -0.00325049"/>
-      <geometry>
-        <mesh filename="package://assets/dm_j4340_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j4_b_2_step -->
-    <visual>
-      <origin xyz="0.000495699 0.152499 -0.63075" rpy="0 -0 -0.00325049"/>
-      <geometry>
-        <mesh filename="package://assets/j4_b_2_step.stl"/>
-      </geometry>
-      <material name="j4_b_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.000495699 0.152499 -0.63075" rpy="0 -0 -0.00325049"/>
-      <geometry>
-        <mesh filename="package://assets/j4_b_2_step.stl"/>
+        <mesh filename="package://assets/merged/dm_j4340_2_step_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -297,68 +105,20 @@
       <mass value="1e-09"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
-    <!-- Part j4_d_2_step -->
+    <!-- Part dm_j4310_1_2_step_parts -->
     <visual>
-      <origin xyz="1e-12 0.477 0.18405" rpy="1.5708 -0 -0"/>
+      <origin xyz="-0.0212019 -0.471012 -0.173077" rpy="-1.58669 0.00277318 -0.0301051"/>
       <geometry>
-        <mesh filename="package://assets/j4_d_2_step.stl"/>
+        <mesh filename="package://assets/merged/dm_j4310_1_2_step_visual.stl"/>
       </geometry>
-      <material name="j4_d_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="dm_j4310_1_2_step_parts_material">
+        <color rgba="1.0 1.0 1.0 1.0"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="1e-12 0.477 0.18405" rpy="1.5708 -0 -0"/>
+      <origin xyz="-0.0212019 -0.471012 -0.173077" rpy="-1.58669 0.00277318 -0.0301051"/>
       <geometry>
-        <mesh filename="package://assets/j4_d_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j4_c_2_step -->
-    <visual>
-      <origin xyz="1e-12 0.477 0.18405" rpy="1.5708 -0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j4_c_2_step.stl"/>
-      </geometry>
-      <material name="j4_c_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="1e-12 0.477 0.18405" rpy="1.5708 -0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j4_c_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part dm_j4310_1_2_step -->
-    <visual>
-      <origin xyz="1e-12 0.477 0.18405" rpy="1.5708 -0 0"/>
-      <geometry>
-        <mesh filename="package://assets/dm_j4310_1_2_step.stl"/>
-      </geometry>
-      <material name="dm_j4310_1_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="1e-12 0.477 0.18405" rpy="1.5708 -0 0"/>
-      <geometry>
-        <mesh filename="package://assets/dm_j4310_1_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j4_e_2_step -->
-    <visual>
-      <origin xyz="1e-12 0.477 0.18405" rpy="1.5708 -0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j4_e_2_step.stl"/>
-      </geometry>
-      <material name="j4_e_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="1e-12 0.477 0.18405" rpy="1.5708 -0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j4_e_2_step.stl"/>
+        <mesh filename="package://assets/merged/dm_j4310_1_2_step_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -369,100 +129,20 @@
       <mass value="1e-09"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
-    <!-- Part j6_d_3_step -->
+    <!-- Part j6_a_3_step_parts -->
     <visual>
-      <origin xyz="-0.00024988 0.15255 -0.3815" rpy="0 -0 0.00163802"/>
+      <origin xyz="-0.0212019 0.141577 -0.375512" rpy="-0.0158141 0.030105 0.00277444"/>
       <geometry>
-        <mesh filename="package://assets/j6_d_3_step.stl"/>
+        <mesh filename="package://assets/merged/j6_a_3_step_visual.stl"/>
       </geometry>
-      <material name="j6_d_3_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="j6_a_3_step_parts_material">
+        <color rgba="1.0 1.0 1.0 1.0"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.00024988 0.15255 -0.3815" rpy="0 -0 0.00163802"/>
+      <origin xyz="-0.0212019 0.141577 -0.375512" rpy="-0.0158141 0.030105 0.00277444"/>
       <geometry>
-        <mesh filename="package://assets/j6_d_3_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part dm_j4310_1_2_step_1 -->
-    <visual>
-      <origin xyz="-0.00024988 0.15255 -0.3815" rpy="0 -0 0.00163802"/>
-      <geometry>
-        <mesh filename="package://assets/dm_j4310_1_2_step_1.stl"/>
-      </geometry>
-      <material name="dm_j4310_1_2_step_1_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.00024988 0.15255 -0.3815" rpy="0 -0 0.00163802"/>
-      <geometry>
-        <mesh filename="package://assets/dm_j4310_1_2_step_1.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j6_b_3_step -->
-    <visual>
-      <origin xyz="-0.00024988 0.15255 -0.3815" rpy="0 -0 0.00163802"/>
-      <geometry>
-        <mesh filename="package://assets/j6_b_3_step.stl"/>
-      </geometry>
-      <material name="j6_b_3_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.00024988 0.15255 -0.3815" rpy="0 -0 0.00163802"/>
-      <geometry>
-        <mesh filename="package://assets/j6_b_3_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j5_a_3_step -->
-    <visual>
-      <origin xyz="-0.00024988 0.15255 -0.3815" rpy="0 -0 0.00163802"/>
-      <geometry>
-        <mesh filename="package://assets/j5_a_3_step.stl"/>
-      </geometry>
-      <material name="j5_a_3_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.00024988 0.15255 -0.3815" rpy="0 -0 0.00163802"/>
-      <geometry>
-        <mesh filename="package://assets/j5_a_3_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j6_a_3_step -->
-    <visual>
-      <origin xyz="-0.00024988 0.15255 -0.3815" rpy="0 -0 0.00163802"/>
-      <geometry>
-        <mesh filename="package://assets/j6_a_3_step.stl"/>
-      </geometry>
-      <material name="j6_a_3_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.00024988 0.15255 -0.3815" rpy="0 -0 0.00163802"/>
-      <geometry>
-        <mesh filename="package://assets/j6_a_3_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j6_c_right_2_step -->
-    <visual>
-      <origin xyz="-0.00024988 0.15255 -0.3815" rpy="0 -0 0.00163802"/>
-      <geometry>
-        <mesh filename="package://assets/j6_c_right_2_step.stl"/>
-      </geometry>
-      <material name="j6_c_right_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.00024988 0.15255 -0.3815" rpy="0 -0 0.00163802"/>
-      <geometry>
-        <mesh filename="package://assets/j6_c_right_2_step.stl"/>
+        <mesh filename="package://assets/merged/j6_a_3_step_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -473,30 +153,30 @@
       <mass value="1e-09"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
-    <!-- Part j7_e_2_step -->
+    <!-- Part j7_e_2_step_parts -->
     <visual>
-      <origin xyz="0.15255 0.336 0.0172" rpy="1.5708 1.5708 0"/>
+      <origin xyz="0.1453 -0.328405 -0.03817" rpy="-0.0535505 -1.54067 -1.52187"/>
       <geometry>
-        <mesh filename="package://assets/j7_e_2_step.stl"/>
+        <mesh filename="package://assets/merged/j7_e_2_step_visual.stl"/>
       </geometry>
-      <material name="j7_e_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="j7_e_2_step_parts_material">
+        <color rgba="1.0 1.0 1.0 1.0"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.15255 0.336 0.0172" rpy="1.5708 1.5708 0"/>
+      <origin xyz="0.1453 -0.328405 -0.03817" rpy="-0.0535505 -1.54067 -1.52187"/>
       <geometry>
-        <mesh filename="package://assets/j7_e_2_step.stl"/>
+        <mesh filename="package://assets/merged/j7_e_2_step_collision.stl"/>
       </geometry>
     </collision>
   </link>
   <!-- Joint from j6_a_3_step to j7_e_2_step -->
   <joint name="r_wrist_roll" type="revolute">
-    <origin xyz="0.0172 2.81739e-05 -0.0455" rpy="-1.5708 0.0112042 1.57243"/>
+    <origin xyz="0.0172 2.81739e-05 -0.0455" rpy="1.5708 0.0112042 1.57243"/>
     <parent link="j6_a_3_step"/>
     <child link="j7_e_2_step"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-0.796602" upper="0.774194"/>
+    <limit effort="10" velocity="10" lower="-0.774194" upper="0.796602"/>
   </joint>
   <!-- Link dm_j4310_1_2_step_2 -->
   <link name="dm_j4310_1_2_step_2">
@@ -505,116 +185,20 @@
       <mass value="1e-09"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
-    <!-- Part fl6700zz_2_step -->
+    <!-- Part dm_j4310_1_2_step_2_parts -->
     <visual>
-      <origin xyz="0.15255 -0.261 -0.0343" rpy="-1.5708 -1.5708 0"/>
+      <origin xyz="-0.14446 0.25341 -0.05527" rpy="-0.0535505 -1.54067 1.61972"/>
       <geometry>
-        <mesh filename="package://assets/fl6700zz_2_step.stl"/>
+        <mesh filename="package://assets/merged/dm_j4310_1_2_step_2_visual.stl"/>
       </geometry>
-      <material name="fl6700zz_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
+      <material name="dm_j4310_1_2_step_2_parts_material">
+        <color rgba="1.0 1.0 1.0 1.0"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.15255 -0.261 -0.0343" rpy="-1.5708 -1.5708 0"/>
+      <origin xyz="-0.14446 0.25341 -0.05527" rpy="-0.0535505 -1.54067 1.61972"/>
       <geometry>
-        <mesh filename="package://assets/fl6700zz_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part dm_j4310_1_2_step_2 -->
-    <visual>
-      <origin xyz="-0.15255 0.261 -0.0343" rpy="1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/dm_j4310_1_2_step_2.stl"/>
-      </geometry>
-      <material name="dm_j4310_1_2_step_2_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.15255 0.261 -0.0343" rpy="1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/dm_j4310_1_2_step_2.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j7_b_2_step -->
-    <visual>
-      <origin xyz="-0.15255 -0.261 -0.0343" rpy="-1.5708 1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/j7_b_2_step.stl"/>
-      </geometry>
-      <material name="j7_b_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.15255 -0.261 -0.0343" rpy="-1.5708 1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/j7_b_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j7_a_2_step -->
-    <visual>
-      <origin xyz="-0.15255 0.261 -0.0343" rpy="1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/j7_a_2_step.stl"/>
-      </geometry>
-      <material name="j7_a_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.15255 0.261 -0.0343" rpy="1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/j7_a_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j7_c_2_step -->
-    <visual>
-      <origin xyz="-0.15255 0.261 -0.0343" rpy="1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/j7_c_2_step.stl"/>
-      </geometry>
-      <material name="j7_c_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.15255 0.261 -0.0343" rpy="1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/j7_c_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part fl6700zz_2_step_1 -->
-    <visual>
-      <origin xyz="0.15255 -0.261 -0.0343" rpy="-1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/fl6700zz_2_step_1.stl"/>
-      </geometry>
-      <material name="fl6700zz_2_step_1_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.15255 -0.261 -0.0343" rpy="-1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/fl6700zz_2_step_1.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j7_b_2_step_2 -->
-    <visual>
-      <origin xyz="-0.15245 0.261 -0.0343" rpy="1.5708 1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/j7_b_2_step_2.stl"/>
-      </geometry>
-      <material name="j7_b_2_step_2_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.15245 0.261 -0.0343" rpy="1.5708 1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/j7_b_2_step_2.stl"/>
+        <mesh filename="package://assets/merged/dm_j4310_1_2_step_2_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -625,116 +209,20 @@
       <mass value="0.208245"/>
       <inertia ixx="0.000366288" ixy="4.37234e-07" ixz="3.64051e-06" iyy="0.000294868" iyz="-3.03598e-05" izz="0.00017809"/>
     </inertial>
-    <!-- Part feetech_sts3215__configuration_default -->
+    <!-- Part gripper_base_parts -->
     <visual>
-      <origin xyz="0.00958442 0.0813874 -0.00876175" rpy="-0 -0.174533 -1.5708"/>
+      <origin xyz="0.000738567 0.084598 0.0158667" rpy="1.56615 -0.00147308 0.00521711"/>
       <geometry>
-        <mesh filename="package://assets/feetech_sts3215__configuration_default.stl"/>
+        <mesh filename="package://assets/merged/gripper_base_visual.stl"/>
       </geometry>
-      <material name="feetech_sts3215__configuration_default_material">
-        <color rgba="0.647059 0.647059 0.647059 1"/>
+      <material name="gripper_base_parts_material">
+        <color rgba="0.698026 0.790622 0.846179 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.00958442 0.0813874 -0.00876175" rpy="-0 -0.174533 -1.5708"/>
+      <origin xyz="0.000738567 0.084598 0.0158667" rpy="1.56615 -0.00147308 0.00521711"/>
       <geometry>
-        <mesh filename="package://assets/feetech_sts3215__configuration_default.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j8_b_2_step -->
-    <visual>
-      <origin xyz="-9.99999e-07 0.260999 0.17305" rpy="1.5708 -0 0"/>
-      <geometry>
-        <mesh filename="package://assets/j8_b_2_step.stl"/>
-      </geometry>
-      <material name="j8_b_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-9.99999e-07 0.260999 0.17305" rpy="1.5708 -0 0"/>
-      <geometry>
-        <mesh filename="package://assets/j8_b_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part gripper_base -->
-    <visual>
-      <origin xyz="-0.0250156 0.122227 -0.00274613" rpy="-0 1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/gripper_base.stl"/>
-      </geometry>
-      <material name="gripper_base_material">
-        <color rgba="0.615686 0.811765 0.929412 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.0250156 0.122227 -0.00274613" rpy="-0 1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/gripper_base.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part b0404 -->
-    <visual>
-      <origin xyz="0.0689844 0.0535 0.0278102" rpy="-1.5708 1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/b0404.stl"/>
-      </geometry>
-      <material name="b0404_material">
-        <color rgba="0.372549 0.654902 0.239216 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.0689844 0.0535 0.0278102" rpy="-1.5708 1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/b0404.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part camera_imu_support -->
-    <visual>
-      <origin xyz="0.0249844 0.122827 -0.00258992" rpy="-0 1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/camera_imu_support.stl"/>
-      </geometry>
-      <material name="camera_imu_support_material">
-        <color rgba="0.615686 0.811765 0.929412 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.0249844 0.122827 -0.00258992" rpy="-0 1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/camera_imu_support.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part j8_a_2_step -->
-    <visual>
-      <origin xyz="1e-12 0.261 0.17305" rpy="1.5708 0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j8_a_2_step.stl"/>
-      </geometry>
-      <material name="j8_a_2_step_material">
-        <color rgba="0.792157 0.819608 0.933333 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="1e-12 0.261 0.17305" rpy="1.5708 0 -0"/>
-      <geometry>
-        <mesh filename="package://assets/j8_a_2_step.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part backplate -->
-    <visual>
-      <origin xyz="-0.0250156 0.122227 -0.00274613" rpy="-0 1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/backplate.stl"/>
-      </geometry>
-      <material name="backplate_material">
-        <color rgba="0.917647 0.917647 0.917647 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.0250156 0.122227 -0.00274613" rpy="-0 1.5708 0"/>
-      <geometry>
-        <mesh filename="package://assets/backplate.stl"/>
+        <mesh filename="package://assets/merged/gripper_base_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -790,68 +278,20 @@
       <mass value="0.100722"/>
       <inertia ixx="5.94511e-05" ixy="6.81532e-06" ixz="-4.17039e-07" iyy="4.45642e-05" iyz="1.07118e-06" izz="3.97205e-05"/>
     </inertial>
-    <!-- Part proximal_side -->
+    <!-- Part feetech_sts3215__configuration_default_parts -->
     <visual>
-      <origin xyz="-0.013016 -0.0136749 0.0435" rpy="3.14159 0 -0.174533"/>
+      <origin xyz="0.0182944 -0.0259223 0.0175868" rpy="2.86176 1.56538 -2.02052"/>
       <geometry>
-        <mesh filename="package://assets/proximal_side.stl"/>
+        <mesh filename="package://assets/merged/feetech_sts3215__configuration_default_visual.stl"/>
       </geometry>
-      <material name="proximal_side_material">
+      <material name="feetech_sts3215__configuration_default_parts_material">
         <color rgba="0.647059 0.647059 0.647059 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.013016 -0.0136749 0.0435" rpy="3.14159 0 -0.174533"/>
+      <origin xyz="0.0182944 -0.0259223 0.0175868" rpy="2.86176 1.56538 -2.02052"/>
       <geometry>
-        <mesh filename="package://assets/proximal_side.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part proximal_bottom -->
-    <visual>
-      <origin xyz="-0.013016 -0.0136749 0.0435" rpy="3.14159 0 -0.174533"/>
-      <geometry>
-        <mesh filename="package://assets/proximal_bottom.stl"/>
-      </geometry>
-      <material name="proximal_bottom_material">
-        <color rgba="0.647059 0.647059 0.647059 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.013016 -0.0136749 0.0435" rpy="3.14159 0 -0.174533"/>
-      <geometry>
-        <mesh filename="package://assets/proximal_bottom.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part feetech_sts3215__configuration_default_2 -->
-    <visual>
-      <origin xyz="0.01225 -0.0212176 0.0089" rpy="-1.5708 0 2.0944"/>
-      <geometry>
-        <mesh filename="package://assets/feetech_sts3215__configuration_default.stl"/>
-      </geometry>
-      <material name="feetech_sts3215__configuration_default_2_material">
-        <color rgba="0.647059 0.647059 0.647059 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.01225 -0.0212176 0.0089" rpy="-1.5708 0 2.0944"/>
-      <geometry>
-        <mesh filename="package://assets/feetech_sts3215__configuration_default.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part proximal_top -->
-    <visual>
-      <origin xyz="-0.013016 -0.0136749 0.0435" rpy="-3.14159 0 -0.174533"/>
-      <geometry>
-        <mesh filename="package://assets/proximal_top.stl"/>
-      </geometry>
-      <material name="proximal_top_material">
-        <color rgba="0.647059 0.647059 0.647059 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.013016 -0.0136749 0.0435" rpy="-3.14159 0 -0.174533"/>
-      <geometry>
-        <mesh filename="package://assets/proximal_top.stl"/>
+        <mesh filename="package://assets/merged/feetech_sts3215__configuration_default_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -862,20 +302,20 @@
       <mass value="0.0417207"/>
       <inertia ixx="1.10253e-05" ixy="2.04438e-06" ixz="3.05704e-07" iyy="1.6107e-05" iyz="1.39544e-07" izz="9.41129e-06"/>
     </inertial>
-    <!-- Part distal -->
+    <!-- Part distal_parts -->
     <visual>
-      <origin xyz="0.0446652 0.0181096 0.0435" rpy="-3.14159 -0 -2.26893"/>
+      <origin xyz="-0.0264976 0.00403103 0.0179373" rpy="2.86176 1.56538 2.16827"/>
       <geometry>
-        <mesh filename="package://assets/distal.stl"/>
+        <mesh filename="package://assets/merged/distal_visual.stl"/>
       </geometry>
-      <material name="distal_material">
+      <material name="distal_parts_material">
         <color rgba="0.231373 0.380392 0.705882 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0446652 0.0181096 0.0435" rpy="-3.14159 -0 -2.26893"/>
+      <origin xyz="-0.0264976 0.00403103 0.0179373" rpy="2.86176 1.56538 2.16827"/>
       <geometry>
-        <mesh filename="package://assets/distal.stl"/>
+        <mesh filename="package://assets/merged/distal_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -910,11 +350,11 @@
     <child link="dm_j4310_1_2_step_2"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
-    <mimic joint="r_wrist_roll" multiplier="-1.0"/>
+    <mimic joint="r_wrist_roll_inv" multiplier="-1.0"/>
   </joint>
   <!-- Joint from dm_j4310_1_2_step to j6_a_3_step -->
   <joint name="r_wrist_yaw" type="revolute">
-    <origin xyz="-0 0.0955 0.0315" rpy="1.5708 -0 0"/>
+    <origin xyz="-0 -0.0955 -0.0315" rpy="-1.5708 0 -0"/>
     <parent link="dm_j4310_1_2_step"/>
     <child link="j6_a_3_step"/>
     <axis xyz="0 0 1"/>
@@ -922,15 +362,15 @@
   </joint>
   <!-- Joint from dm_j4340_2_step to dm_j4310_1_2_step -->
   <joint name="r_elbow" type="revolute">
-    <origin xyz="-0.000102553 -0.0315498 -0.15375" rpy="-1.5708 -0 -0.00325049"/>
+    <origin xyz="-0.000102553 -0.0315498 -0.15375" rpy="1.5708 -0 -0.00325049"/>
     <parent link="dm_j4340_2_step"/>
     <child link="dm_j4310_1_2_step"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-2.44346" upper="0"/>
+    <limit effort="10" velocity="10" lower="-0" upper="2.44346"/>
   </joint>
   <!-- Joint from j2_b_2_step to dm_j4340_2_step -->
   <joint name="r_arm_yaw" type="revolute">
-    <origin xyz="-0 -0.06625 0.0301" rpy="-1.5708 -1.5708 0"/>
+    <origin xyz="-0 0.06625 -0.0301" rpy="1.5708 1.5708 0"/>
     <parent link="j2_b_2_step"/>
     <child link="dm_j4340_2_step"/>
     <axis xyz="0 0 1"/>
@@ -938,18 +378,18 @@
   </joint>
   <!-- Joint from dm_j8009p_2_step_1 to j2_b_2_step -->
   <joint name="r_arm_roll" type="revolute">
-    <origin xyz="-0.0301 -0 -0.06" rpy="-1.5708 -1.55499 -1.5708"/>
+    <origin xyz="-0.0301 0 0.06" rpy="-1.5708 1.55499 1.5708"/>
     <parent link="dm_j8009p_2_step_1"/>
     <child link="j2_b_2_step"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.33193" upper="0.158726"/>
+    <limit effort="10" velocity="10" lower="-0.158726" upper="3.33193"/>
   </joint>
   <!-- Joint from hfsb6_6060_750_1_step to dm_j8009p_2_step_1 -->
   <joint name="r_arm_pitch" type="revolute">
-    <origin xyz="-0 -0.0925 0.689" rpy="-1.5708 -0.0301087 -0"/>
+    <origin xyz="-0 -0.0925 0.689" rpy="1.5708 -0.0301087 -0"/>
     <parent link="hfsb6_6060_750_1_step"/>
     <child link="dm_j8009p_2_step_1"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-2.96989" upper="1.0301"/>
+    <limit effort="10" velocity="10" lower="-1.0301" upper="2.96989"/>
   </joint>
 </robot>

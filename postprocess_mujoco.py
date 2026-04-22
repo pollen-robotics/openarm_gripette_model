@@ -2,18 +2,19 @@
 """Post-process onshape-to-robot MuJoCo output for the OpenArm Gripette model.
 
 Run this after every `onshape-to-robot-mujoco openarm_right` generation.
-It applies the following patches to robot.xml:
 
-1. Remove meshdir="assets" from <compiler> and prefix mesh filenames with "assets/"
-   → makes robot.xml includable from scene files in other directories
+Patches to robot.xml:
+  1. Remove meshdir="assets" from <compiler> and prefix mesh filenames with "assets/"
+     → makes robot.xml includable from scene files in other directories
+  2. Set contype="2" conaffinity="1" on the collision geom class
+     → prevents self-collision between adjacent robot links
+  3. Increase armature (0.005 → 0.1) and actuator gains (kp 50 → 500)
+     → stiffer position tracking in simulation
+  4. Add the Gripette camera element next to the camera site
+     → MuJoCo camera for offscreen rendering (with 180° pitch correction, fovy=130)
 
-2. Set contype="2" conaffinity="1" on the collision geom class
-   → prevents self-collision between adjacent robot links (CAD mesh overlaps)
-
-3. Increase actuator gains (kp 50 → 500) for stiffer position tracking in simulation
-
-4. Add the Gripette camera element next to the camera site
-   → MuJoCo camera for offscreen rendering (with 180° pitch correction and wide FOV)
+Patches to scene.xml:
+  5. Add offwidth="1296" offheight="972" to <global> so offscreen rendering works
 
 Usage:
     cd openarm_gripette_model
@@ -24,9 +25,10 @@ Usage:
 import re
 from pathlib import Path
 
-ROBOT_XML = Path(__file__).parent / "openarm_gripette_model" / "openarm_right" / "robot.xml"
+MODEL_DIR = Path(__file__).parent / "openarm_gripette_model" / "openarm_right"
+ROBOT_XML = MODEL_DIR / "robot.xml"
+SCENE_XML = MODEL_DIR / "scene.xml"
 
-# Camera element to insert after the camera site
 CAMERA_ELEMENT = (
     '                    <!-- Gripette camera (180° pitch correction from site frame to MuJoCo camera convention) -->\n'
     '                    <!-- fovy=130° for wide pinhole render, fisheye distortion applied in post -->\n'
@@ -35,61 +37,72 @@ CAMERA_ELEMENT = (
 )
 
 
-def postprocess():
+def patch_robot_xml():
     text = ROBOT_XML.read_text()
     original = text
 
-    # 1. Remove meshdir="assets" from compiler, keep other attributes
-    text = re.sub(
-        r'(<compiler\b[^>]*)\s+meshdir="assets"([^>]*>)',
-        r'\1\2',
-        text,
-    )
+    # 1. Remove meshdir from compiler, prefix mesh files
+    text = re.sub(r'(<compiler\b[^>]*)\s+meshdir="assets"([^>]*>)', r'\1\2', text)
+    text = re.sub(r'<mesh file="(?!assets/)([^"]+)"', r'<mesh file="assets/\1"', text)
 
-    # Prefix mesh file references with assets/
-    # <mesh file="foo.stl"/> → <mesh file="assets/foo.stl"/>
-    # Skip if already prefixed
-    text = re.sub(
-        r'<mesh file="(?!assets/)([^"]+)"',
-        r'<mesh file="assets/\1"',
-        text,
-    )
-
-    # 2. Set collision class contype/conaffinity
+    # 2. Collision class filtering
     text = re.sub(
         r'(<default class="collision">\s*<geom group="3")(\s*/>)',
         r'\1 contype="2" conaffinity="1"\2',
         text,
     )
 
-    # 3. Increase armature and actuator gains for stiffer tracking (simulation only)
+    # 3. Stiffer actuators
     text = re.sub(
-        r'<joint frictionloss="0.1" armature="0.005"/>',
+        r'<joint frictionloss="0\.1" armature="0\.005"/>',
         '<joint frictionloss="0.1" armature="0.1"/>',
         text,
     )
-    text = re.sub(
-        r'<position kp="50"',
-        '<position kp="500"',
-        text,
-    )
+    text = re.sub(r'<position kp="50"', '<position kp="500"', text)
 
-    # 4. Add Gripette camera after the camera site (if not already present)
+    # 4. Gripette camera
     if "gripette_cam" not in text:
-        # Find the camera site line and insert after it
-        camera_site_pattern = r'(<!-- Frame camera -->\n\s*<site group="3" name="camera"[^/]*/>\n)'
-        match = re.search(camera_site_pattern, text)
-        if match:
-            text = text[:match.end()] + CAMERA_ELEMENT + "\n" + text[match.end():]
+        pat = r'(<!-- Frame camera -->\n\s*<site group="3" name="camera"[^/]*/>\n)'
+        m = re.search(pat, text)
+        if m:
+            text = text[:m.end()] + CAMERA_ELEMENT + "\n" + text[m.end():]
         else:
-            print("WARNING: Could not find camera site to insert gripette_cam")
+            print("WARNING: camera site not found — skipping gripette_cam insertion")
 
     if text != original:
         ROBOT_XML.write_text(text)
-        print(f"Patched {ROBOT_XML}")
+        print(f"Patched {ROBOT_XML.name}")
     else:
-        print(f"No changes needed in {ROBOT_XML}")
+        print(f"No changes in {ROBOT_XML.name}")
+
+
+def patch_scene_xml():
+    if not SCENE_XML.exists():
+        print(f"{SCENE_XML} not found — skipping")
+        return
+    text = SCENE_XML.read_text()
+    original = text
+
+    # 5. Add offwidth/offheight to <global> tag (for offscreen rendering)
+    if "offwidth" not in text:
+        text = re.sub(
+            r'(<global\b[^/]*?)(/?>)',
+            r'\1 offwidth="1296" offheight="972"\2',
+            text,
+            count=1,
+        )
+
+    if text != original:
+        SCENE_XML.write_text(text)
+        print(f"Patched {SCENE_XML.name}")
+    else:
+        print(f"No changes in {SCENE_XML.name}")
+
+
+def main():
+    patch_robot_xml()
+    patch_scene_xml()
 
 
 if __name__ == "__main__":
-    postprocess()
+    main()
