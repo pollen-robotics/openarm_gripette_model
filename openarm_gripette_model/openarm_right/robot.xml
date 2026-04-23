@@ -57,7 +57,7 @@
               <!-- Link j6_a_3_step -->
               <body name="j6_a_3_step" pos="-0 -0.0955 -0.0315" quat="0.707107 -0.707107 0 -0">
                 <!-- Joint from dm_j4310_1_2_step to j6_a_3_step -->
-                <joint axis="0 0 1" name="r_wrist_yaw" type="hinge" range="-1.5724343476473788 1.5691583059424143"/>
+                <joint axis="0 0 -1" name="r_wrist_yaw" type="hinge" range="-1.5691583059424143 1.5724343476473788"/>
                 <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
                 <!-- Part j6_a_3_step_parts -->
                 <geom type="mesh" class="visual" pos="-0.0212019 0.141577 -0.375512" quat="0.999854 -0.00792697 0.0150405 0.00150603" mesh="j6_a_3_step_visual" material="j6_a_3_step_visual_material"/>

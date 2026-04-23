@@ -357,8 +357,8 @@
     <origin xyz="-0 -0.0955 -0.0315" rpy="-1.5708 0 -0"/>
     <parent link="dm_j4310_1_2_step"/>
     <child link="j6_a_3_step"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-1.57243" upper="1.56916"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="10" velocity="10" lower="-1.56916" upper="1.57243"/>
   </joint>
   <!-- Joint from dm_j4340_2_step to dm_j4310_1_2_step -->
   <joint name="r_elbow" type="revolute">
