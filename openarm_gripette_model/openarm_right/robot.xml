@@ -41,7 +41,7 @@
           <!-- Link dm_j4340_2_step -->
           <body name="dm_j4340_2_step" pos="-0 0.06625 -0.0301" quat="0.5 0.5 0.5 -0.5">
             <!-- Joint from j2_b_2_step to dm_j4340_2_step -->
-            <joint axis="0 0 1" name="r_arm_yaw" type="hinge" range="-1.567545835500403 1.57404681808939"/>
+            <joint axis="0 0 -1" name="r_arm_yaw" type="hinge" range="-1.57404681808939 1.567545835500403"/>
             <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
             <!-- Part dm_j4340_2_step_parts -->
             <geom type="mesh" class="visual" pos="-0.0207418 0.141595 -0.624762" quat="0.999855 -0.00790251 0.0150533 -0.000118976" mesh="dm_j4340_2_step_visual" material="dm_j4340_2_step_visual_material"/>
@@ -82,7 +82,7 @@
                   <!-- Link gripper_base -->
                   <body name="gripper_base" pos="0.0205 -0 -0.0343" quat="0.707052 -0.0087938 -0.707052 0.0087938">
                     <!-- Joint from dm_j4310_1_2_step_2 to gripper_base -->
-                    <joint axis="0 0 1" name="r_wrist_pitch" type="hinge" range="-1.595669601692545 1.5459230518972482"/>
+                    <joint axis="0 0 -1" name="r_wrist_pitch" type="hinge" range="-1.5459230518972482 1.595669601692545"/>
                     <inertial pos="0.000738567 0.084598 0.0158667" mass="0.208245" fullinertia="0.000366288 0.000294868 0.00017809 4.37234e-07 3.64051e-06 -3.03598e-05"/>
                     <!-- Part gripper_base_parts -->
                     <geom type="mesh" class="visual" pos="0.000738567 0.084598 0.0158667" quat="0.708745 0.70546 0.00131821 0.0023684" mesh="gripper_base_visual" material="gripper_base_visual_material"/>
